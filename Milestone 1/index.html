@@ -17,18 +17,19 @@
       <div class="container">
         <div class="main-left">
           <div class="top-container">
-            <span class="contact">
-              <img src="img/avatar_1.jpg" alt="">
-              <span class="name">Leonardo</span>
+            <span class="contact p-10">
+              <img src="img/avatar_io.jpg" alt="Il mio Avatar">
+              <span class="name">Marica</span>
             </span>
             <!--Icons-->
             <span class="menu-icons">
               <span class="icon"><i class="fa-sharp fa-solid fa-circle-notch"></i></span>
               <span class="icon"><i class="fa-solid fa-message"></i></span>
               <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
-
             </span>
           </div>
+
+          <!--Attiva campanella notifiche-->
           <div class="notice">
               <div class="icon">
                 <i class="fa-solid fa-bell-slash"></i>
@@ -43,8 +44,8 @@
                   Attiva notifiche desktop
                 </span>
               </div>
-
           </div>
+
           <!--Search bar-->
           <div class="search">
             <button type="submit" class="searchButton">
@@ -53,16 +54,67 @@
             <input type="text" class="searchTerm" placeholder="Cerca o inizia una nuova chat">
           </div>
 
-          <div class="contacts">
-            Contatti
+          <!--Contatti-->
+          <div class="users-list">
+            <ul>
+              <li v-for="contact in contacts" :key="contact.name">
+                <div class="avatar">
+                  <img :src="contact.avatar" alt="Contatto">
+                </div>
+
+                <div class="avatar-text p-10">
+                  <span class="name-contact">{{contact.name}}</span>
+                  <br>
+                  <span class="last-access">
+                    {{ contact.messages[contact.messages.length-1].message }}</span>
+                </div>
+
+                <div class="date">
+                  12.12
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="main-right">
           <div class="top-container">
-            
+            <div class="contact-chat p-10">
+              <img src="img/avatar_1.jpg" alt="">
+              <span class="name">Pierdo</span>
+            </div>
+
+            <div class="chat-icons">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span><i class="fa-sharp fa-solid fa-paperclip"></i></span>
+              <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </div>
           </div>
-          <div class="content"></div>
+
+          <!--Chat Msg-->
+          <div class="content">
+
+            <div class="received msg m-10">
+              <p>Ciao</p>
+              <div class="date"></div>
+            </div>
+            
+            <div class="sent msg m-10">
+              <p>Ciao</p>
+            </div>
+
+          </div>
+          <div class="button-container">
+            <span class="face p-10"><i class="fa-regular fa-face-smile"></i></span>
+
+            <span class="new-msg">
+              <input type="text" class="new-message" placeholder="Scrivi un messaggio">
+            </span>
+
+            <span class="micro p-10">
+              <i class="fa-solid fa-microphone"></i>
+            </span>
+          </div>
         </div>
       </div> 
       

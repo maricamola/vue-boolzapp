@@ -8,6 +8,20 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Utilities*/
+
+.p-10{
+  padding: 10px;
+}
+
+.msg{
+  background-color: white;
+}
+
+.m-10{
+  margin: 10px;
+}
+
 .main-wrapper{
   height: 100vh;
   background-color: rgb(219,219,210);
@@ -27,16 +41,17 @@ body{
 .main-left{
   width: 30%;
   height: 100%;
-  border: 1px solid black;
 }
 
 .main-right{
   width: 70%;
-  height: 100%;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.top-container{
+.top-container ,
+.button-container{
   height: 10%;
   width: 100%;
   background-color: #EAEAEA;
@@ -61,11 +76,12 @@ body{
   justify-content: center;
 }
 
-.contacts{
+.users-list{
   width: 100%;
   height: 73%;
   background-color: white;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 img{
@@ -74,12 +90,16 @@ img{
   border-radius: 50px;
 }
 
-.menu-icons{
+.menu-icons,
+.chat-icons{
   margin: 10px;
   padding: 10px;
 }
 
-.icon{
+.icon,
+.chat-icons,
+.face,
+.micro{
   margin: 5px;
   cursor: pointer;
   color: gray;
@@ -102,7 +122,10 @@ img{
   font-size: 14px;
 }
 
-.notice-active{
+.notice-active,
+.access,
+.last-access,
+.date{
   font-size: 10px;
   color: gray;
   text-decoration: underline;
@@ -115,18 +138,110 @@ img{
   padding: 10px;
 }
 
-.searchButton{
+.searchButton,
+.new-message{
   border: none;
   cursor: pointer;
   background-color: white;
-  padding: 10px;
+  padding: 8px;
   border: 2px solid white;
+  margin: none;
 }
 
 .searchButton:hover{
   border: 2px solid black;
   border-radius: 5px;
 }
+
+.chat-icons i{
+  margin: 5px;
+} 
+
+.access,
+.last-access,
+.date{
+  text-decoration: none;
+}
+
+.users-list ul li{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.users-list ul li:hover{
+  transition: 1s;
+  background-color: rgba(128, 128, 128, 0.208);
+}
+
+.avatar{
+  display: flex;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  height: 80%;
+  word-wrap: break-word;
+}
+
+.content .sent{
+  display: flex;
+  justify-content: flex-end;
+    background-color:#D5F9BA;
+}
+
+.content .received{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.face:hover{
+  color: yellow;
+}
+
+.micro:hover{
+  color: red;
+}
+
+.new-msg ,
+.new-message{
+  width: 100%;
+}
+
+.new-message:hover{
+  border-color: white;
+}
+
+.top-container{
+  border-left: 1px solid rgba(128, 128, 128, 0.473);
+}
+
+.received{
+  max-width: 60%;
+  border-radius: 0px 30px;
+  padding: 20px;
+}
+
+.sent{
+  max-width: 60%;
+  border-radius: 30px 0px;
+  padding: 20px;
+}
+
+.date{
+  display: flex;
+  
+}
+
+
+
+
+
+
 
 
 

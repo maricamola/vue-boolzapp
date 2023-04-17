@@ -91,6 +91,10 @@ img{
   border-radius: 50px;
 }
 
+.top-container img{
+  margin: 10px;
+}
+
 .menu-icons,
 .chat-icons{
   margin: 10px;
@@ -185,20 +189,26 @@ img{
 .content{
   display: flex;
   justify-content: space-between;
-  overflow-y: scroll;
-  height: 80%;
+  overflow-y: hidden;
   word-wrap: break-word;
+  padding: 0px 40px;
 }
 
 .content .sent{
   display: flex;
   justify-content: flex-end;
-    background-color:#D5F9BA;
+  background-color:#D5F9BA;
+  max-width: 60%;
+  border-radius: 20px 0;
+  padding: 20px;
 }
 
 .content .received{
   display: flex;
   justify-content: flex-start;
+  max-width: 60%;
+  border-radius: 0px 20px;
+  padding: 20px;
 }
 
 .face:hover{
@@ -222,17 +232,7 @@ img{
   border-left: 1px solid rgba(128, 128, 128, 0.473);
 }
 
-.received{
-  max-width: 60%;
-  border-radius: 0px 30px;
-  padding: 20px;
-}
 
-.sent{
-  max-width: 60%;
-  border-radius: 30px 0px;
-  padding: 20px;
-}
 
 
 

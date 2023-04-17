@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <title>Boolzapp</title>
 </head>
@@ -16,9 +17,42 @@
       <div class="container">
         <div class="main-left">
           <div class="top-container">
+            <span class="contact">
+              <img src="img/avatar_1.jpg" alt="">
+              <span class="name">Leonardo</span>
+            </span>
+            <!--Icons-->
+            <span class="menu-icons">
+              <span class="icon"><i class="fa-sharp fa-solid fa-circle-notch"></i></span>
+              <span class="icon"><i class="fa-solid fa-message"></i></span>
+              <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+
+            </span>
           </div>
-          <div class="notice"></div>
-          <div class="search"></div>
+          <div class="notice">
+              <div class="icon">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              
+              <div class="notice-text">
+                <span class="text">
+                Ricevi notifiche di nuovi messaggi
+                </span>
+                <br>
+                <span class="notice-active">
+                  Attiva notifiche desktop
+                </span>
+              </div>
+
+          </div>
+          <!--Search bar-->
+          <div class="search">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+            <input type="text" class="searchTerm" placeholder="Cerca o inizia una nuova chat">
+          </div>
+
           <div class="contacts">
             Contatti
           </div>

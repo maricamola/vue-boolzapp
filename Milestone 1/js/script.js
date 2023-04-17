@@ -45,7 +45,7 @@ createApp({
               },
               {
                   date: '16:35',
-                  message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                  message: 'Mi piacerebbe molto!',
                   status: 'sent'
               }
           ],
@@ -108,7 +108,7 @@ createApp({
       },
       {
           name: 'Sara',
-          avatar: 'img/avatar_5.jpg',
+          avatar: 'img/avatar_6.jpg',
           visible: true,
           messages: [
               {
@@ -140,7 +140,7 @@ createApp({
               },
               {
                   date: '15:50',
-                  message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                  message: 'Grazie per avermelo ricordato!',
                   status: 'received'
               }
           ],

@@ -60,17 +60,18 @@
               <li v-for="contact in contacts" :key="contact.name">
                 <div class="avatar">
                   <img :src="contact.avatar" alt="Contatto">
+                  <div class="avatar-text p-10">
+                    <span class="name-contact">{{contact.name}}</span>
+                    <br>
+                    <span class="last-access">
+                    {{ contact.messages[contact.messages.length-1].message }}</span>
+                  </div>
                 </div>
 
-                <div class="avatar-text p-10">
-                  <span class="name-contact">{{contact.name}}</span>
-                  <br>
-                  <span class="last-access">
-                    {{ contact.messages[contact.messages.length-1].message }}</span>
-                </div>
+                
 
                 <div class="date">
-                  12.12
+                  {{contact.messages[contact.messages.length-1].date}}
                 </div>
               </li>
             </ul>

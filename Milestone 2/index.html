@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Boolzapp</title>
+</head>
+<body>
+  <div id="app">
+
+    <div class="main-wrapper">
+
+      <div class="container">
+        <div class="main-left">
+          <div class="top-container">
+            <span class="contact p-10">
+              <img src="img/avatar_io.jpg" alt="Il mio Avatar">
+              <span class="name">Marica</span>
+            </span>
+            <!--Icons-->
+            <span class="menu-icons">
+              <span class="icon"><i class="fa-sharp fa-solid fa-circle-notch"></i></span>
+              <span class="icon"><i class="fa-solid fa-message"></i></span>
+              <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </span>
+          </div>
+
+          <!--Attiva campanella notifiche-->
+          <div class="notice">
+              <div class="icon">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              
+              <div class="notice-text">
+                <span class="text">
+                Ricevi notifiche di nuovi messaggi
+                </span>
+                <br>
+                <span class="notice-active">
+                  Attiva notifiche desktop
+                </span>
+              </div>
+          </div>
+
+          <!--Search bar-->
+          <div class="search">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+            <input type="text" class="searchTerm" placeholder="Cerca o inizia una nuova chat">
+          </div>
+
+          <!--Contatti-->
+          <div class="users-list">
+            <ul>
+              <li v-for="contact in contacts" :key="contact.name">
+                <div class="avatar">
+                  <img :src="contact.avatar" alt="Contatto">
+                  <div class="avatar-text p-10">
+                    <span class="name-contact">{{contact.name}}</span>
+                    <br>
+                    <span class="last-access">
+                    {{ contact.messages[contact.messages.length-1].message }}</span>
+                  </div>
+                </div>
+
+                
+
+                <div class="date">
+                  {{contact.messages[contact.messages.length-1].date}}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-right">
+          <div class="top-container">
+            <div class="contact-chat p-10">
+              <img src="img/avatar_1.jpg" alt="">
+              <span class="name">Pierdo</span>
+            </div>
+
+            <div class="chat-icons">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span><i class="fa-sharp fa-solid fa-paperclip"></i></span>
+              <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </div>
+          </div>
+
+          <!--Chat Msg-->
+          <div class="content">
+
+          <!--Messaggi ricevuti-->
+          <div class="msg-received">
+            <div class="received msg m-10">
+              <p>Ciao, come stai?</p>
+              <div class="date"></div>
+            </div>
+          </div>
+            
+
+            <!--Messaggi inviati-->
+            <div class="msg-sent">
+              <div class="sent msg m-10">
+                ciao
+              </div>
+
+              <div class="sent msg m-10">
+              tutto bene, tu?
+              </div>
+            </div>
+
+          </div>
+          <div class="button-container">
+            <span class="face p-10"><i class="fa-regular fa-face-smile"></i></span>
+
+            <span class="new-msg">
+              <input type="text" class="new-message" placeholder="Scrivi un messaggio">
+            </span>
+
+            <span class="micro p-10">
+              <i class="fa-solid fa-microphone"></i>
+            </span>
+          </div>
+        </div>
+      </div> 
+      
+    </div>
+  
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

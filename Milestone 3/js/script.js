@@ -182,16 +182,35 @@ createApp({
 
         newmsg(){
             const newmsg = {
-                date: '10/10/2023',
+                date: '10/04/2023',
                 hour: '16.16',
                 message: this.newmessage,
                 status: 'sent'
             }
 
-            this.contacts[this.counter].messages.push(newmsg)
+
+            if(this.newmessage.length === 0){
+                console.warn('nessun messaggio');
+            }else{
+                this.contacts[this.counter].messages.push(newmsg)
+                this.answer()
+            }
+
 
             this.newmessage = '';
+        },
+
+        answer(){
+            setTimeout(() => {
+                const answer = {
+                date: '10/04/2023',
+                hour: '16.16',
+                message: 'si, perfetto Marica!',
+                status: 'received'
+                }
+                this.contacts[this.counter].messages.push(answer);
+            },1000);
         }
-    }
+    },
     
 }).mount('#app')

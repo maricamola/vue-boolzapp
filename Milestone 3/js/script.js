@@ -181,22 +181,21 @@ createApp({
         },
 
         newmsg(){
+
+
+
+            if(this.newmessage.length === 0){
+                console.warn('nessun messaggio');
+            }else{
             const newmsg = {
                 date: '10/04/2023',
                 hour: '16.16',
                 message: this.newmessage,
                 status: 'sent'
             }
-
-
-            if(this.newmessage.length === 0){
-                console.warn('nessun messaggio');
-            }else{
                 this.contacts[this.counter].messages.push(newmsg)
                 this.answer()
             }
-
-
             this.newmessage = '';
         },
 

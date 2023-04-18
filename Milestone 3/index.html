@@ -111,11 +111,11 @@
 
             <span class="new-msg">
               <input type="text" 
-              v-model="newmessage" 
+              v-model.trim="newmessage" 
               @keyup.enter="newmsg()"
               class="new-message" placeholder="Scrivi un messaggio">
             </span>
-            
+
             <span class="micro p-10">
               <i class="fa-solid fa-microphone"></i>
             </span>

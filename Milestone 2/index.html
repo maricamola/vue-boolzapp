@@ -57,7 +57,7 @@
           <!--Contatti-->
           <div class="users-list">
             <ul>
-              <li v-for="contact in contacts" :key="contact.name">
+              <li v-for="(contact,index) in contacts" @click="userclick(index)">
                 <div class="avatar">
                   <img :src="contact.avatar" alt="Contatto">
                   <div class="avatar-text p-10">
@@ -67,8 +67,6 @@
                     {{ contact.messages[contact.messages.length-1].message }}</span>
                   </div>
                 </div>
-
-                
 
                 <div class="date">
                   {{contact.messages[contact.messages.length-1].date}}
@@ -81,8 +79,8 @@
         <div class="main-right">
           <div class="top-container">
             <div class="contact-chat p-10">
-              <img src="img/avatar_1.jpg" alt="">
-              <span class="name">Pierdo</span>
+              <img :src="contacts[counter].avatar" alt="">
+              <span class="name">{{contacts[counter].name}}</span>
             </div>
 
             <div class="chat-icons">
@@ -97,21 +95,21 @@
 
           <!--Messaggi ricevuti-->
           <div class="msg-received">
-            <div class="received msg m-10">
-              <p>Ciao, come stai?</p>
-              <div class="date"></div>
+            <div class="received msg m-10" >
+              <p>Ciao</p>
+              <div class="date">12.12</div>
             </div>
           </div>
             
 
             <!--Messaggi inviati-->
             <div class="msg-sent">
-              <div class="sent msg m-10">
-                ciao
-              </div>
+              
 
               <div class="sent msg m-10">
               tutto bene, tu?
+              <br>
+              <div class="date">12.12</div>
               </div>
             </div>
 

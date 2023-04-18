@@ -136,7 +136,7 @@ createApp({
         messages: [
             {
                 date: '15:30',
-                message: 'Fai gli auguri a Martina che è ilsuo compleanno!',
+                message: 'Fai gli auguri a Martina che è il suo compleanno!',
                 status: 'sent'
             },
             {
@@ -167,8 +167,17 @@ createApp({
                 status: 'received'
             }
         ],
+
         }
-        ]
+        ],
+        counter:0
     }
+    },
+
+    methods:{
+        userclick(index){
+            this.counter=index
+        }
     }
+    
 }).mount('#app')

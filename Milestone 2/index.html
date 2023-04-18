@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/cjs-browser/luxon.min.js' integrity='sha512-ZGdwCAOsGcPQuzC8BJ9GH7caxUpJkOW/bc1EG70FSBABVJOJ566cmnpcVjGtRck5eYqh9IsQEkS55AExaJrwRg==' crossorigin='anonymous'></script>
   <title>Boolzapp</title>
 </head>
 <body>
@@ -94,24 +95,17 @@
           <div class="content">
 
           <!--Messaggi ricevuti-->
-          <div class="msg-received">
-            <div class="received msg m-10" >
-              <p>Ciao</p>
-              <div class="date">12.12</div>
-            </div>
-          </div>
-            
 
-            <!--Messaggi inviati-->
-            <div class="msg-sent">
-              
-
-              <div class="sent msg m-10">
-              tutto bene, tu?
-              <br>
-              <div class="date">12.12</div>
-              </div>
+            <div class="messaggi" v-for="messaggio in (contacts[counter].messages)"
+            :class="messaggio.status">
+              <span>{{messaggio.message}}</span>
+              <span class="date"></span>
             </div>
+
+            <!--Messaggi inviati
+            <div class="messaggi received">
+              <span>ciao</span>
+            </div>-->
 
           </div>
           <div class="button-container">
